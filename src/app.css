@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    margin: 0;
+    background-image: url("../public/writing-to-do-list.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: rgba(255, 255, 255, 0);
+}
+::-webkit-scrollbar-track {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(232, 152, 99);
+}
+#root {
+    padding: 20px;
+}
+
+input {
+    background: transparent;
+    border-radius: 15px;
+}
+input,
+textarea {
+    padding: 10px;
+    outline: none !important;
+    border: 1px solid black;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.641) inset !important;
+}
+
+button {
+    background: rgb(231, 158, 91);
+    border-radius: 15px;
+    color: white;
+    border: 0;
+    text-shadow: 0 0 10px black;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.187);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.app {
+    border-radius: 20px;
+    padding: 20px;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    box-shadow: 0 0 20px rgb(0 0 0 / 27%);
+    background-color: rgba(255, 255, 255, 0.305);
+    overflow: auto;
+    height: 90vh;
+}
+.app::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0);
+    margin-right: 10px;
+    width: 5px;
+}
+.app::-webkit-scrollbar-track {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0);
+}
+.app::-webkit-scrollbar-thumb {
+    background-color: linear-gradient(black white) !important;
+}
+
+.searchWrapper {
+    display: flex;
+    margin: 10px auto;
+    justify-content: left;
+    align-items: center;
+}
+
+.searchWrapper input {
+    border-radius: 15px;
+    margin: 0 5px;
+}
+
+.buttons.shownData {
+    display: block;
+}
+
+.buttons.notShownData {
+    display: flex;
+}
+
+.notShownData > .otherDataButton {
+    margin: 0 auto 0 0;
+}
+
+.otherDataButton > div {
+    background-color: #e7e7e7;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+.buttons > button {
+    width: 30%;
+}
+
+.todoBox {
+    margin: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.412);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.todoBox button {
+    right: 15px;
+    bottom: 15px;
+    position: absolute;
+}
+
+.userBox {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.189);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.userBox:hover {
+    transform: scale(1.05);
+}
+
+.completedTodosUser {
+    background-color: rgba(0, 128, 0, 0.264) !important;
+}
+
+.notCompletedTodosUser {
+    background-color: rgba(255, 0, 0, 0.281) !important;
+}
+
+.userData {
+    position: absolute;
+    right: 2%;
+    top: 0;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.userData > div {
+    border-radius: 20px;
+    padding: 20px;
+    height: -moz-fit-content;
+    height: 90vh;
+    margin: 0 10px;
+    overflow: auto;
+    position: sticky;
+}
+
+.userData h3 {
+    font-size: 1.5rem;
+}
+.usersListWrapper {
+}
+
+.userTodos {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.245);
+    width: 35%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.305);
+}
+
+.userPosts {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.245);
+    width: 65%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.305);
+}
+
+.userDataCompID {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.708);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+.postBox {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 25px;
+    border: none !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.256);
+}
+.postBox h3,
+.postBox h4 {
+    width: fit-content;
+    margin: 0;
+}
+.inputWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    align-items: center;
+}
+.formSections > button {
+    margin-top: 20px;
+}
+.addPostContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+.addPostContent > div {
+    width: 100%;
+}
+.addPostContent input,
+.addPostContent textarea {
+    width: 100%;
+    max-width: 100%;
+}
+.addPostContent textarea {
+    resize: none;
+}
+.addPostContent .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
