@@ -70,6 +70,8 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.305);
     overflow: auto;
     height: 90vh;
+    min-width: 21%;
+    width: 21%;
 }
 .app::-webkit-scrollbar {
     background-color: rgba(255, 255, 255, 0);

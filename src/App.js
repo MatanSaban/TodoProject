@@ -140,7 +140,7 @@ function App() {
             id="searchBox"
             onChange={handleSearch}
           />
-          <button onClick={handleNewUser}>Add User</button>
+          <button onClick={handleNewUser}>{!addUser ? 'Add User' : 'Cancel'}</button>
         </div>
         {!addUser ? (
           <Users
